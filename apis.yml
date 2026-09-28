@@ -1,23 +1,68 @@
 aid: bionoxx
+
 name: Bionoxx
-description: 'Bionoxx is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: Bionoxx is a biotechnology company focused on developing innovative solutions in the field of molecular diagnostics and bioinformatics.
+  The company aims to provide advanced data-driven tools for researchers and clinicians, leveraging cutting‑edge technologies to improve health
+  outcomes. This stub was initially added to the API Evangelist network from secondary‑market sources and is being enriched through the full profiling
+  pipeline.
+
 url: https://raw.githubusercontent.com/api-evangelist/bionoxx/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-28 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-28'
+
 modified: '2026-09-28'
+
 tags:
 - Company
-apis: []
+- Biotechnology
+- MolecularDiagnostics
+- Bioinformatics
+- HealthTech
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Vendors
+  url: vendors/bionoxx-vendors.yml
+- type: Hosts
+  url: hosts/bionoxx-hosts.yml
 - type: Website
   url: https://equityzen.com/company/bionoxx
+- type: DomainSecurity
+  url: security/bionoxx-domain-security.yml
+- type: coverage
+  url: http://bionoxx.com
+  x-coverage:
+    state: none
+    reason: no-developer-program
+    detail: Bionoxx website provides only company information and no public developer API or documentation.
+    evidence:
+    - url: http://bionoxx.com
+      status: 200
+    checked: '2026-09-28'
+
+apis:
+- name: Bionoxx API
+  description: Bionoxx does not appear to expose a public developer API; the website provides company information and product descriptions only.
+  humanURL: http://bionoxx.com
+  aid: bionoxx:bionoxx-api
+x-enrichment:
+  date: '2026-09-28'
+  status: enriched
+  artifacts_added: 5
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
